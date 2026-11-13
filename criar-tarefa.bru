@@ -1,0 +1,23 @@
+meta {
+  name: criar-tarefa
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:5000/tarefas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: COLAR_TOKEN_AQUI
+}
+
+body:json {
+  {
+    "titulo": "Estudar Flask",
+    "descricao": "Rever JWT",
+    "estado": "Pendente"
+  }
+}
